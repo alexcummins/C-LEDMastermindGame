@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alex/Documents/rpiProject/SnakeC/main.c
+stdio.h
+-
+termios.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/time.h
+-
+time.h
+-
+ncurses.h
+-
+
