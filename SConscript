@@ -53,12 +53,15 @@ ws2811_slib = tools_env.SharedLibrary('libws2811', lib_srcs)
 srcs = Split('''
     main.c
 ''')
+# I guess can replace this test program with our own maybe??
 
 objs = []
 for src in srcs:
    objs.append(tools_env.Object(src))
 
 test = tools_env.Program('test', objs + tools_env['LIBS'])
+# How to get our test program to give us executable?
+
 
 Default([test, ws2811_lib])
 
