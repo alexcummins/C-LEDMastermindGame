@@ -1,7 +1,7 @@
 #ifndef EXTENSION_GRID_H
 #define EXTENSION_GRID_H
 
-#include "ws2811.h"
+#include "../ws2811.h"
 
 void initialiseMatrix(void);
 void copyUpRows(int index);

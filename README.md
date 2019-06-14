@@ -1,8 +1,10 @@
-Looks like we can just put our program in main replacing the test one. Useful functions already set up like aligning the list of LEDS into a matrix and allocating the mem for it etc... 
-Uses another alternative to Make and CMake called Scons. We could either continue using it or try and create our own makefile which could work too, not sure.
-Then could create some files containing other games or cool things to display etc and call them from the main.c, passing through the pointer to the matrix defined.
-Simple games for 10x10 matrix could include minesweeper, snake, pong, maybe some kind of simple exploration game with a map that scrolls, or just a cool animation. just random ideas idk. Remember because the grid is 10x10 there isn't very high resolution so it's kinda hard to display text etc (can only fit like 3 characters on the screen at one time ish)
-Also one of the LEDs can't display red and one is kinda flashing and being a bit dodge sooo guess I gotta try fix that.
+Library is set up to accomodate my 10x10 WS2811 RGB LED grid.
+
+List of games:
+Mastermind
+
+Files we changed are in mastermind folder, as well as main.c, and the SConscript.
+Default README.md below for rpi_ws281x library:
 
 rpi_ws281x
 ==========

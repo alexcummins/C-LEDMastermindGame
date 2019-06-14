@@ -40,8 +40,8 @@ lib_srcs = Split('''
     pcm.c
     dma.c
     rpihw.c
-    mastermind.c
-    grid.c
+    mastermind/mastermind.c
+    mastermind/grid.c
 ''')
 
 version_hdr = tools_env.Version('version')
@@ -95,4 +95,3 @@ package = tools_env.Command('%s.deb' % package_name, package_files,
                             'cd %s; dpkg-deb --build %s' % (Dir('.').abspath, package_name));
 
 Alias("deb", package)
-

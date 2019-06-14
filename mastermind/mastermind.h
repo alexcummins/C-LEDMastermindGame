@@ -1,7 +1,7 @@
 #ifndef CEXTENSIONPROJECT_RPI_WS281X_FORK_MASTERMIND_H
 #define CEXTENSIONPROJECT_RPI_WS281X_FORK_MASTERMIND_H
 
-#include "ws2811.h"
+#include "../ws2811.h"
 #include <stdbool.h>
 
 int runGame(ws2811_t *ledString);
