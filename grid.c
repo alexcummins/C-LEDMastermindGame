@@ -86,4 +86,8 @@ void printMatrix(ws2811_t *ledString) {
         printf("%c", '_');
     }
     printf("\n");
+    ws2811_return_t ret;
+    if ((ret = ws2811_render(ledString)) != WS2811_SUCCESS) {
+        fprintf(stderr, "ws2811_render failed: %s\n", ws2811_get_return_t_str(ret));
+    }
 }

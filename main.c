@@ -366,11 +366,6 @@ int main(int argc, char *argv[]) {
     runGame(&ledstring);
 
 
-    if ((ret = ws2811_render(&ledstring)) != WS2811_SUCCESS) {
-        fprintf(stderr, "ws2811_render failed: %s\n", ws2811_get_return_t_str(ret));
-    }
-
-
     if (clear_on_exit) {
         matrix_clear();
         matrix_render();
