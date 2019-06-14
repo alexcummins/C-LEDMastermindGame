@@ -47,7 +47,7 @@ bool anotherGame(void) {
 
 void clearBuffer() {
     char c;
-    while ((c = getchar()) != '\n' && c != EOF);
+    while ((c = getchar()) != '\n');
 }
 
 void readGuess(char *guess) {
