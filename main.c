@@ -309,6 +309,10 @@ int main(int argc, char *argv[]) {
         return ret;
     }
 
+    matrix_clear();
+    matrix_render();
+    ws2811_render(&ledstring);
+
     runGame(&ledstring);
 
     if (clear_on_exit) {
