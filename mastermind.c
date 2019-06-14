@@ -17,7 +17,9 @@ int runGame(ws2811_t *ledString) {
 
     char guess[4];
     readGuess(guess);
+    printMatrix(ledString);
     setScore(blackScore(guess, code), whiteScore(guess, code));
+    printMatrix(ledString);
     int guessCount = 1;
     while (blackScore(guess, code) != 4 && guessCount < 9) {
         readGuess(guess);
