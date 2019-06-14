@@ -40,6 +40,8 @@ lib_srcs = Split('''
     pcm.c
     dma.c
     rpihw.c
+    mastermind.c
+    grid.c
 ''')
 
 version_hdr = tools_env.Version('version')
@@ -53,17 +55,15 @@ ws2811_slib = tools_env.SharedLibrary('libws2811', lib_srcs)
 srcs = Split('''
     main.c
 ''')
-# I guess can replace this test program with our own maybe??
 
 objs = []
 for src in srcs:
    objs.append(tools_env.Object(src))
 
-test = tools_env.Program('test', objs + tools_env['LIBS'])
-# How to get our test program to give us executable?
+LEDMastermind = tools_env.Program('LEDMastermind', objs + tools_env['LIBS'])
 
 
-Default([test, ws2811_lib])
+Default([LEDMastermind, ws2811_lib])
 
 package_version = "1.1.0-1"
 package_name = 'libws2811_%s' % package_version
