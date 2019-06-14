@@ -65,7 +65,7 @@ void printMatrix(ws2811_t *ledString) {
         // Account for alternating rows on the LED grid
         int pos = 0;
         if (i % 20 > 9){
-            pos = 9 - (i % 10);
+            pos = ((WIDTH - 1) + 10 * ((i / 10) % 10)) - (i % 10);
         }
         else {
             pos = i;
