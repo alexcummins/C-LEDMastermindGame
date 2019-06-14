@@ -11,6 +11,7 @@
 #define YELLOW 0x00202000
 #define WHITE 0x00202020
 #define PINK 0x00FF33FF
+#define BLACK 0x00000000
 
 static char leds[100];
 int numberGuesses = 0;
@@ -62,31 +63,27 @@ void printMatrix(ws2811_t *ledString) {
         }
 
         // Account for alternating rows on the LED grid
-        int pos = 0;
-        if (i % 20 > 9){
-            pos = 9 - (i % 10);
-        }
-        else {
-            pos = i;
-        }
         switch (leds[i]) {
             case 'r':
-                ledString->channel[0].leds[pos] = RED;
+                ledString->channel[0].leds[i] = RED;
                 break;
             case 'b':
-                ledString->channel[0].leds[pos] = BLUE;
+                ledString->channel[0].leds[i] = BLUE;
                 break;
             case 'g':
-                ledString->channel[0].leds[pos] = GREEN;
+                ledString->channel[0].leds[i] = GREEN;
                 break;
             case 'y':
-                ledString->channel[0].leds[pos] = YELLOW;
+                ledString->channel[0].leds[i] = YELLOW;
                 break;
             case 'p':
-                ledString->channel[0].leds[pos] = PINK;
+                ledString->channel[0].leds[i] = PINK;
                 break;
             case 'w':
-                ledString->channel[0].leds[pos] = WHITE;
+                ledString->channel[0].leds[i] = WHITE;
+                break;
+            default:
+                ledString->channel[0].leds[i] = 0x00000000;
                 break;
         }
     }
