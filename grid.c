@@ -10,7 +10,7 @@
 #define GREEN 0x00002000
 #define YELLOW 0x00202000
 #define WHITE 0x00202020
-#define PINK 0x00FF33FF
+#define PINK 0x00FF01FF
 #define BLACK 0x00000000
 
 static char leds[100];
