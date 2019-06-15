@@ -4,17 +4,16 @@
 #include "../ws2811.h"
 #include <stdbool.h>
 
-int runGame(ws2811_t *ledString);
+void runGame(ws2811_t *ledString);
 
 bool anotherGame(void);
 
-void readGuess(char *guess);
+void readGuess(char *guess, ws2811_t *ledString);
 
-int blackScore(char guess[4], char code[4]);
+void score(char guess[4], char code[4], int *blackScore, int *whiteScore);
 
-int whiteScore(char guess[4], char code[4]);
+int charToIndex(char chr);
 
-void printScore(char g[], char c[]);
-
+void clearBuffer(void);
 
 #endif //CEXTENSIONPROJECT_RPI_WS281X_FORK_MASTERMIND_H

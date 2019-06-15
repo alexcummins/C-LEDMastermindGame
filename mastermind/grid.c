@@ -53,7 +53,7 @@ void setGuess(int index, char chr) {
     leds[9 * 10 + 6 + index] = chr;
 }
 
-void printMatrix(ws2811_t *ledString) {
+void displayMatrix(ws2811_t *ledString) {
     printf("\033[0;31m");
     for (int i = 0; i < 100; i++) {
         if (i % 10 == 9) {
