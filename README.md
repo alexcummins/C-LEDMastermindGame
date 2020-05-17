@@ -1,6 +1,6 @@
 # LED Mastermind Game
 
-Code to play a game of Mastermind [Wikipedia](https://en.wikipedia.org/wiki/Mastermind_(board_game)) on a 10x10 WS2811 RGB LED grid.
+Code to play a game of [Mastermind](https://en.wikipedia.org/wiki/Mastermind_(board_game)) on a 10x10 WS2811 RGB LED grid.
 
 Library is set up to accomodate my 10x10 WS2811 RGB LED grid.
 Main calls runGame from import mastermind.h passing in the ledstring to be updated.
