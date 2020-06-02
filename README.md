@@ -14,7 +14,7 @@ There is also an incomplete start at making a game of snake in Snake folder.
 
 ## Getting Started
 
-My LED grid is run with a raspberry Pi, which can be set up by following the Adafruit Neopixel (tutorial)[https://learn.adafruit.com/neopixels-on-raspberry-pi]. Attributes of the LED grid such as width and height are constants in main.c. This code is intended to be run on the Raspberry Pi in the terminal, with the game grid displayed on the LED matrix.
+My LED grid is run with a raspberry Pi, which can be set up by following the Adafruit Neopixel [tutorial](https://learn.adafruit.com/neopixels-on-raspberry-pi). Attributes of the LED grid such as width and height are constants in main.c. This code is intended to be run on the Raspberry Pi in the terminal, with the game grid displayed on the LED matrix.
 
 
 ### Prerequisites
